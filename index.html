@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Tip Calculator</title>
+</head>
+
+<body>
+  <img id="main-logo" src="./images/logo.svg" alt="Tip Splitter App">
+  <div class="container">
+    <div class="div-left main">
+      <div class="bill">
+        <p>Bill💸</p>
+        <div class="input-container">
+          <img src="./images/icon-dollar.svg" alt="dollars" srcset="">
+          <input type="number" id="bill-input" placeholder="Total amount due ..."
+            onchange="((el) => {el.value=parseFloat(el.value).toFixed(2);})(this)">
+        </div>
+      </div>
+      <div class="tip">
+        <p>Select Tip %🤔</p>
+        <div class="button-container">
+          <button class="buttons btns-color">5%</button>
+          <button class="buttons btns-color">10%</button>
+          <button class="buttons btns-color">15%</button>
+          <button class="buttons btns-color">25%</button>
+          <button class="buttons btns-color">50%</button>
+          <input type="number" name="" id="custom" maxlength="2" placeholder="Custom Tip">
+        </div>
+
+      </div>
+      <div class="people">
+        <p>Number of People🧑‍🤝‍🧑</p>
+        <div class="input-container">
+          <img src="./images/icon-person.svg" alt="person" srcset="">
+          <input type="number" name="" id="people-input" placeholder="0">
+        </div>
+      </div>
+    </div>
+    <div class="div-right main">
+      <div class="totals">
+        <div class="amount">
+          <div class="tip-per">
+            <p>Tip amount</p>
+            <p class="person">/ person</p>
+          </div>
+          <h1 id="tip-per-person">$0.00</h1>
+        </div>
+
+        <div class="amount">
+          <div class="total-per">
+            <p>Total</p>
+            <p class="person">/ person</p>
+          </div>
+          <h1 id="total-per-person">$0.00</h1>
+        </div>
+      </div>
+
+      <div class="reset btn-reset">
+        <button onclick="reset()">RESET</button>
+      </div>
+    </div>
+  </div>
+  <!-- 🌛 -->
+  <a id="theme-btn">🌞</a>
+  <!-- <img id="theme-btn" src="./images/icon-moon.svg" alt="sun or moon"> -->
+</body>
+
+</html>
